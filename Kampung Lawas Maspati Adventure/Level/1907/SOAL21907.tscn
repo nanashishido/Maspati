@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl0sj3vliwlu2"]
+
+[ext_resource type="Script" path="res://Level/1907/SOAL21907.gd" id="1_61h8n"]
+[ext_resource type="Texture2D" uid="uid://bc6qb81ps3ssq" path="res://Asset map/tamplate10.png" id="1_bbrcm"]
+[ext_resource type="FontFile" uid="uid://bh7q0lw18rkoc" path="res://Pixeled.ttf" id="2_3wxaw"]
+
+[sub_resource type="Theme" id="Theme_pv5ib"]
+Button/font_sizes/font_size = 9
+Button/fonts/font = ExtResource("2_3wxaw")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_61h8n")
+
+[node name="level" type="Button" parent="."]
+offset_left = 500.0
+offset_right = 529.0
+offset_bottom = 30.0
+
+[node name="HOME" type="Button" parent="."]
+offset_left = 466.0
+offset_right = 495.0
+offset_bottom = 30.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bbrcm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 35.0
+offset_right = 493.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3wxaw")
+theme_override_font_sizes/font_size = 10
+text = "Dahulu rumah ini merupakan?"
+autowrap_mode = 2
+
+[node name="tua" type="Button" parent="."]
+offset_left = 135.0
+offset_top = 179.0
+offset_right = 357.0
+offset_bottom = 213.0
+theme = SubResource("Theme_pv5ib")
+text = "Toko Sepatu"
+
+[node name="raden" type="Button" parent="."]
+offset_left = 283.0
+offset_top = 121.0
+offset_right = 504.0
+offset_bottom = 155.0
+theme = SubResource("Theme_pv5ib")
+text = "Pabrik Sepatu"
+
+[node name="loro" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 121.0
+offset_right = 251.0
+offset_bottom = 155.0
+theme = SubResource("Theme_pv5ib")
+text = "Pabrik Gula"
+
+[connection signal="pressed" from="level" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="HOME" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="tua" to="." method="_on_tua_pressed"]
+[connection signal="pressed" from="raden" to="." method="_on_raden_pressed"]
+[connection signal="pressed" from="loro" to="." method="_on_loro_pressed"]

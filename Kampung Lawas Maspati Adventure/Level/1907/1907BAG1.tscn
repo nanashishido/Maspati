@@ -1,0 +1,157 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcsaqxsqopmq1"]
+
+[ext_resource type="Script" path="res://Level/1907/1907BAG1.gd" id="1_dngr1"]
+[ext_resource type="Texture2D" uid="uid://ct2objkp7piuy" path="res://Asset map/Sprite-0001.png" id="2_pr6bi"]
+[ext_resource type="Texture2D" uid="uid://85802i3s8qsh" path="res://Asset map/Asset1.png" id="3_ebph6"]
+[ext_resource type="Texture2D" uid="uid://bv1vaytjxya8o" path="res://Asset map/aset.png" id="4_igtp0"]
+[ext_resource type="Texture2D" uid="uid://dj5w805gotdvq" path="res://Asset map/tamplate dani.png" id="5_bi6gn"]
+[ext_resource type="FontFile" uid="uid://bh7q0lw18rkoc" path="res://Pixeled.ttf" id="6_lchhr"]
+[ext_resource type="PackedScene" path="res://Asset begerak/bg.tscn" id="7_c2daa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xd7nd"]
+texture = ExtResource("2_pr6bi")
+0:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+0:8/0 = 0
+2:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+0:10/0 = 0
+2:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+0:12/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x775l"]
+texture = ExtResource("3_ebph6")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_actwt"]
+sources/0 = SubResource("TileSetAtlasSource_xd7nd")
+sources/1 = SubResource("TileSetAtlasSource_x775l")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dngr1")
+
+[node name="next" type="Button" parent="."]
+offset_left = -1.0
+offset_top = 196.0
+offset_right = 544.0
+offset_bottom = 335.0
+
+[node name="Home" type="Button" parent="."]
+offset_left = 512.0
+offset_right = 528.0
+offset_bottom = 16.0
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 496.0
+offset_right = 512.0
+offset_bottom = 16.0
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_actwt")
+format = 2
+layer_0/tile_data = PackedInt32Array(1179648, 1, 1, 1114112, 1, 1, 1048576, 1, 0, 1114113, 65537, 1, 1114114, 65537, 1, 1114115, 65537, 1, 1114116, 65537, 1, 1114117, 65537, 1, 1114118, 65537, 1, 1114119, 65537, 1, 1114120, 65537, 1, 1114121, 65537, 1, 1114122, 65537, 1, 1114123, 65537, 1, 1114124, 65537, 1, 1114125, 65537, 1, 1114126, 65537, 1, 1114127, 65537, 1, 1114128, 65537, 1, 1179665, 65537, 1, 1179666, 65537, 1, 1179667, 65537, 1, 1179668, 65537, 1, 1179669, 65537, 1, 1179670, 65537, 1, 1179671, 65537, 1, 1179672, 65537, 1, 1179673, 65537, 1, 1179674, 65537, 1, 1179675, 65537, 1, 1179676, 65537, 1, 1179677, 65537, 1, 1179678, 65537, 1, 1179679, 65537, 1, 1114144, 65537, 1, 1179680, 65537, 1, 1179664, 65537, 1, 1179663, 65537, 1, 1179662, 65537, 1, 1179661, 65537, 1, 1179660, 65537, 1, 1179659, 65537, 1, 1179658, 65537, 1, 1179657, 65537, 1, 1179656, 65537, 1, 1179655, 65537, 1, 1179654, 65537, 1, 1179653, 65537, 1, 1179652, 65537, 1, 1179651, 65537, 1, 1179650, 65537, 1, 1179649, 65537, 1, 1114143, 65537, 1, 1048608, 65537, 0, 1048607, 65537, 0, 1048606, 65537, 0, 1048605, 65537, 0, 1048604, 65537, 0, 1048603, 65537, 0, 1048602, 65537, 0, 1048601, 65537, 0, 1048600, 65537, 0, 1048599, 65537, 0, 1048598, 65537, 0, 1048597, 65537, 0, 1048596, 65537, 0, 1048595, 65537, 0, 1048594, 65537, 0, 1048593, 65537, 0, 1048592, 65537, 0, 1048591, 65537, 0, 1048590, 65537, 0, 1048589, 65537, 0, 1048588, 65537, 0, 1048587, 65537, 0, 1048586, 65537, 0, 1048585, 65537, 0, 1048584, 65537, 0, 1048583, 65537, 0, 1048582, 65537, 0, 1048581, 65537, 0, 1048580, 65537, 0, 1048579, 65537, 0, 1048578, 65537, 0, 1048577, 65537, 0, 1048609, 65537, 0, 1114145, 65537, 1, 1179681, 65537, 1, 32, 0, 0, 31, 262144, 10)
+
+[node name="Aset" type="Sprite2D" parent="."]
+position = Vector2(264.25, 148)
+scale = Vector2(1.00095, 1)
+texture = ExtResource("4_igtp0")
+
+[node name="TamplateDani" type="Sprite2D" parent="."]
+position = Vector2(272, 152)
+texture = ExtResource("5_bi6gn")
+
+[node name="BG" parent="." instance=ExtResource("7_c2daa")]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 32.0
+offset_top = 214.0
+offset_right = 498.0
+offset_bottom = 286.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_lchhr")
+theme_override_font_sizes/normal_font_size = 8
+text = "Bangunan yang ada di belakangku merupakan rumah tua 1907 yang dimiliki oleh H. Soemargono yang dulu merupakan pabrik sepatu."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 194.0
+offset_right = 164.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_lchhr")
+theme_override_font_sizes/font_size = 10
+text = "Mas Dani"
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

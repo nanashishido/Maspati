@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://djfb0rhig4w45"]
+
+[ext_resource type="Script" path="res://ASset begerak/Loroongko.gd" id="1_1suj5"]
+[ext_resource type="Texture2D" uid="uid://banj6dyqirieo" path="res://character maspati/Masdani/karakter mas dani2.png" id="1_jqwnw"]
+[ext_resource type="Texture2D" uid="uid://b0r80tdvq0x0k" path="res://character maspati/Masdani/karakter mas dani3.png" id="2_l6irf"]
+[ext_resource type="Texture2D" uid="uid://c24avppt6ubdw" path="res://character maspati/Masdani/karakter mas dani4.png" id="3_27drc"]
+[ext_resource type="Texture2D" uid="uid://dl2vrv0lcqxt8" path="res://character maspati/Masdani/karakter mas dani5.png" id="4_suhka"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jo6qx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jqwnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l6irf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_27drc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_suhka")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_npwk8"]
+radius = 17.0
+height = 66.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1suj5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jo6qx")
+frame_progress = 0.426437
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_npwk8")

@@ -1,0 +1,156 @@
+[gd_scene load_steps=14 format=3 uid="uid://dpj16mw2n080u"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_had5r"]
+[ext_resource type="PackedScene" path="res://Asset begerak/bg.tscn" id="2_w0eea"]
+[ext_resource type="Texture2D" uid="uid://85802i3s8qsh" path="res://Asset map/Asset1.png" id="3_d5wei"]
+[ext_resource type="Texture2D" uid="uid://ct2objkp7piuy" path="res://Asset map/Sprite-0001.png" id="4_0okej"]
+[ext_resource type="PackedScene" uid="uid://nnb7vyivefgp" path="res://player/player.tscn" id="5_4bgqd"]
+[ext_resource type="Texture2D" uid="uid://bv1vaytjxya8o" path="res://Asset map/aset.png" id="6_3sbyq"]
+[ext_resource type="PackedScene" uid="uid://bimjmos3dtsu1" path="res://ASset begerak/NPC.tscn" id="7_usnma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1slac"]
+size = Vector2(612, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc10y"]
+size = Vector2(57, 286)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c181p"]
+size = Vector2(74, 279)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dhn5d"]
+texture = ExtResource("3_d5wei")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0lxo"]
+texture = ExtResource("4_0okej")
+0:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+0:8/0 = 0
+2:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+0:10/0 = 0
+2:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+0:12/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_p0iis"]
+sources/0 = SubResource("TileSetAtlasSource_dhn5d")
+sources/1 = SubResource("TileSetAtlasSource_r0lxo")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_had5r")
+
+[node name="level" type="Button" parent="."]
+offset_left = 496.0
+offset_right = 512.0
+offset_bottom = 16.0
+
+[node name="home" type="Button" parent="."]
+offset_left = 512.0
+offset_right = 528.0
+offset_bottom = 16.0
+
+[node name="BG" parent="." instance=ExtResource("2_w0eea")]
+
+[node name="Aset" type="Sprite2D" parent="."]
+position = Vector2(264.25, 148)
+scale = Vector2(1.00095, 1)
+texture = ExtResource("6_3sbyq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(297, 271)
+shape = SubResource("RectangleShape2D_1slac")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-31, 131)
+shape = SubResource("RectangleShape2D_kc10y")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(569, 137)
+shape = SubResource("RectangleShape2D_c181p")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_p0iis")
+format = 2
+layer_0/tile_data = PackedInt32Array(1179648, 0, 1, 1114112, 0, 1, 1048576, 0, 0, 1048577, 65536, 0, 1048578, 65536, 0, 1048579, 65536, 0, 1048580, 65536, 0, 1048581, 65536, 0, 1048582, 65536, 0, 1048583, 65536, 0, 1048584, 65536, 0, 1114120, 65536, 1, 1114121, 65536, 1, 1114122, 65536, 1, 1048586, 65536, 0, 1048587, 65536, 0, 1048585, 65536, 0, 1114124, 65536, 1, 1048589, 65536, 0, 1048590, 65536, 0, 1048588, 65536, 0, 1048591, 65536, 0, 1048592, 65536, 0, 1048593, 65536, 0, 1048594, 65536, 0, 1048595, 65536, 0, 1048596, 65536, 0, 1048597, 65536, 0, 1048598, 65536, 0, 1048599, 65536, 0, 1048600, 65536, 0, 1048601, 65536, 0, 1048602, 65536, 0, 1048603, 65536, 0, 1048604, 65536, 0, 1048605, 65536, 0, 1048606, 65536, 0, 1048607, 65536, 0, 1048608, 65536, 0, 1048609, 65536, 0, 1114113, 65536, 1, 1179649, 65536, 1, 1114114, 65536, 1, 1179650, 65536, 1, 1114115, 65536, 1, 1179651, 65536, 1, 1114116, 65536, 1, 1179652, 65536, 1, 1114117, 65536, 1, 1179653, 65536, 1, 1114118, 65536, 1, 1179654, 65536, 1, 1114119, 65536, 1, 1179655, 65536, 1, 1179656, 65536, 1, 1179657, 65536, 1, 1179658, 65536, 1, 1114123, 65536, 1, 1179659, 65536, 1, 1179660, 65536, 1, 1114125, 65536, 1, 1179661, 65536, 1, 1114126, 65536, 1, 1179662, 65536, 1, 1114127, 65536, 1, 1179663, 65536, 1, 1114128, 65536, 1, 1179664, 65536, 1, 1114129, 65536, 1, 1179665, 65536, 1, 1114130, 65536, 1, 1179666, 65536, 1, 1114131, 65536, 1, 1179667, 65536, 1, 1114132, 65536, 1, 1179668, 65536, 1, 1114133, 65536, 1, 1179669, 65536, 1, 1114134, 65536, 1, 1179670, 65536, 1, 1114135, 65536, 1, 1179671, 65536, 1, 1114136, 65536, 1, 1179672, 65536, 1, 1114137, 65536, 1, 1179673, 65536, 1, 1114138, 65536, 1, 1179674, 65536, 1, 1114139, 65536, 1, 1179675, 65536, 1, 1114140, 65536, 1, 1179676, 65536, 1, 1114141, 65536, 1, 1179677, 65536, 1, 1114142, 65536, 1, 1179678, 65536, 1, 1114143, 65536, 1, 1179679, 65536, 1, 1114144, 65536, 1, 1179680, 65536, 1, 1114145, 65536, 1, 1179681, 65536, 1, 32, 1, 0, 31, 262145, 10)
+
+[node name="Mika" parent="." instance=ExtResource("5_4bgqd")]
+position = Vector2(91, 230)
+
+[node name="Area2D" parent="." instance=ExtResource("7_usnma")]
+position = Vector2(451, 230)
+scale = Vector2(1.00095, 1)
+
+[connection signal="pressed" from="level" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

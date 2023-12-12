@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://co7k2jbakc43v"]
+
+[ext_resource type="Texture2D" uid="uid://bc6qb81ps3ssq" path="res://Asset map/tamplate10.png" id="1_7t215"]
+[ext_resource type="Script" path="res://Level/loro/end.gd" id="1_krmu8"]
+[ext_resource type="FontFile" uid="uid://bh7q0lw18rkoc" path="res://Pixeled.ttf" id="2_61ucq"]
+
+[sub_resource type="Theme" id="Theme_pquiv"]
+Button/font_sizes/font_size = 9
+Button/fonts/font = ExtResource("2_61ucq")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_krmu8")
+
+[node name="Tamplate10" type="Sprite2D" parent="."]
+position = Vector2(272, 152)
+texture = ExtResource("1_7t215")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 35.0
+offset_right = 493.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_61ucq")
+theme_override_font_sizes/font_size = 10
+text = "Nama Lain sekolah ongko loro adalah?"
+autowrap_mode = 2
+
+[node name="sekolah" type="Button" parent="."]
+offset_left = 167.0
+offset_top = 199.0
+offset_right = 357.0
+offset_bottom = 233.0
+theme = SubResource("Theme_pquiv")
+text = "Vervolgschool"
+
+[node name="loro" type="Button" parent="."]
+offset_left = 314.0
+offset_top = 121.0
+offset_right = 504.0
+offset_bottom = 155.0
+theme = SubResource("Theme_pquiv")
+text = "volkschool"
+
+[node name="ongko" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 121.0
+offset_right = 218.0
+offset_bottom = 155.0
+theme = SubResource("Theme_pquiv")
+text = "onderwijzeres"
+
+[connection signal="pressed" from="sekolah" to="." method="_on_sekolah_pressed"]
+[connection signal="pressed" from="loro" to="." method="_on_loro_pressed"]
+[connection signal="pressed" from="ongko" to="." method="_on_ongko_pressed"]

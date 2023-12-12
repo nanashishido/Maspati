@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Apa nama rumah tadi?",
+    "options": [
+      "Rumah Tua 1907",
+      "Rumah Raden Soemomihardjo",
+      "Sekolah Ongko Loro"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "question": "Dahulu rumah ini merupakan?",
+    "options": [
+      "Pabrik Gula",
+      "Pabrik Sepatu",
+      "Toko Sepatu"
+    ],
+    "correctOptionIndex": 1
+  },
+  {
+    "question": "Rumah ini juga pernah digunakan untuk berkumpulnya para pemuda untuk menyusun strategi peperangan?",
+    "options": [
+      "10 November 1945",
+      "30 September 1965",
+      "28 Oktober 1950"
+    ],
+    "correctOptionIndex": 0
+  },
+  {
+    "question": "Rumah 1907 ini dulu dimiliki oleh siapa?",
+    "options": [
+      "Ir. Soekarno",
+      "Raden Soemomihardjo",
+      "H. Soemargono"
+    ],
+    "correctOptionIndex": 2
+  },
+  {
+    "question": "sekarang rumah ini beralih fungsi sebagai?",
+    "options": [
+      "Rumah Warga",
+      "Kafe dan Perpustakaan",
+      "Perpustakaan"
+    ],
+    "correctOptionIndex": 1
+  }
+]

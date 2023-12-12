@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://bimjmos3dtsu1"]
+
+[ext_resource type="Script" path="res://ASset begerak/NPC.gd" id="1_2ickb"]
+[ext_resource type="Texture2D" uid="uid://banj6dyqirieo" path="res://character maspati/Masdani/karakter mas dani2.png" id="1_ww2d1"]
+[ext_resource type="Texture2D" uid="uid://b0r80tdvq0x0k" path="res://character maspati/Masdani/karakter mas dani3.png" id="2_08072"]
+[ext_resource type="Texture2D" uid="uid://c24avppt6ubdw" path="res://character maspati/Masdani/karakter mas dani4.png" id="3_myarp"]
+[ext_resource type="Texture2D" uid="uid://dl2vrv0lcqxt8" path="res://character maspati/Masdani/karakter mas dani5.png" id="4_h2d6e"]
+[ext_resource type="FontFile" uid="uid://bh7q0lw18rkoc" path="res://Pixeled.ttf" id="6_rsiy6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fv1td"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ww2d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_08072")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_myarp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h2d6e")
+}],
+"loop": true,
+"name": &"Idel",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wypbt"]
+radius = 25.0
+height = 70.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_2ickb")
+
+[node name="mas dani" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fv1td")
+animation = &"Idel"
+frame = 3
+frame_progress = 0.693408
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_wypbt")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -36.0
+offset_top = -39.0
+offset_right = 37.0
+offset_bottom = -22.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rsiy6")
+theme_override_font_sizes/font_size = 5
+text = "INTERACT (Enter)"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

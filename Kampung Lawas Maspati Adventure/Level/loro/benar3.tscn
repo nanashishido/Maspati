@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlp63e715g6k0"]
+
+[ext_resource type="Script" path="res://Level/loro/benar3.gd" id="1_snvhx"]
+[ext_resource type="PackedScene" path="res://ASset begerak/bg.tscn" id="2_ilpty"]
+[ext_resource type="Texture2D" uid="uid://cd0rpa3w1sl2s" path="res://Asset map/Nilai/75.png" id="3_1nf7m"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_snvhx")
+
+[node name="BG" parent="." instance=ExtResource("2_ilpty")]
+
+[node name="home" type="Button" parent="."]
+offset_left = 307.0
+offset_top = 175.0
+offset_right = 356.0
+offset_bottom = 224.0
+
+[node name="level" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 175.0
+offset_right = 225.0
+offset_bottom = 224.0
+
+[node name="back" type="Button" parent="."]
+offset_left = 242.0
+offset_top = 175.0
+offset_right = 291.0
+offset_bottom = 224.0
+
+[node name="75" type="Sprite2D" parent="."]
+position = Vector2(272, 152)
+texture = ExtResource("3_1nf7m")
+
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="home" to="BG" method="_on_home_pressed"]
+[connection signal="pressed" from="level" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

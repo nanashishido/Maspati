@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://dstgmrkvkxh16"]
+
+[ext_resource type="Script" path="res://Level/raden/Miku.gd" id="1_5v3c4"]
+[ext_resource type="Texture2D" uid="uid://bc6qb81ps3ssq" path="res://Asset map/tamplate10.png" id="2_e8han"]
+[ext_resource type="FontFile" uid="uid://bh7q0lw18rkoc" path="res://Pixeled.ttf" id="3_ewgr0"]
+
+[sub_resource type="Theme" id="Theme_350jx"]
+Button/font_sizes/font_size = 9
+Button/fonts/font = ExtResource("3_ewgr0")
+
+[sub_resource type="Theme" id="Theme_0jb3g"]
+Button/font_sizes/font_size = 9
+Button/fonts/font = ExtResource("3_ewgr0")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5v3c4")
+
+[node name="Tamplate10" type="Sprite2D" parent="."]
+position = Vector2(272, 152)
+texture = ExtResource("2_e8han")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 35.0
+offset_right = 493.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ewgr0")
+theme_override_font_sizes/font_size = 10
+text = "Apa nama rumah yang tadi?"
+autowrap_mode = 2
+
+[node name="ler" type="Button" parent="."]
+offset_left = 285.0
+offset_top = 122.0
+offset_right = 498.0
+offset_bottom = 156.0
+theme = SubResource("Theme_350jx")
+text = "Sekolah Ongko Loro
+"
+
+[node name="ben" type="Button" parent="."]
+offset_left = 155.0
+offset_top = 190.0
+offset_right = 376.0
+offset_bottom = 224.0
+theme = SubResource("Theme_350jx")
+text = "Rumah Raden Soemomihardjo"
+
+[node name="rumah" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 120.0
+offset_right = 246.0
+offset_bottom = 156.0
+theme = SubResource("Theme_0jb3g")
+text = "Rumah Tua 1907"
+
+[connection signal="pressed" from="ler" to="." method="_on_ler_pressed"]
+[connection signal="pressed" from="ben" to="." method="_on_ben_pressed"]
+[connection signal="pressed" from="rumah" to="." method="_on_rumah_pressed"]

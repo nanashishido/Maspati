@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr4w3oxceh5f7"]
+
+[ext_resource type="Texture2D" uid="uid://bhb3vgt0fwve3" path="res://Asset map/background fix.png" id="1_b0gc0"]
+[ext_resource type="Script" path="res://ASset begerak/bg.gd" id="1_pih0p"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_pih0p")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(561, 0)
+
+[node name="BackgroundFix" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(140.25, 148.66)
+scale = Vector2(0.0837798, 0.0837798)
+texture = ExtResource("1_b0gc0")
+
+[node name="BackgroundFix2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(421, 148.66)
+scale = Vector2(0.0837798, 0.0837798)
+texture = ExtResource("1_b0gc0")
